@@ -18,8 +18,8 @@ describe FixedArray do
       expect(arr.get(1)).to eq(nil)
     end
 
-    xit "should throw OutOfBoundsException" do
-      expect{ arr.get(4) }.to raise_error(standardError , "OutOFBoundsException")
+    it "should throw OutOfBoundsException" do
+      expect{ arr.get(4) }.to raise_error("OutOfBoundsException")
     end
   end
 
@@ -29,7 +29,7 @@ describe FixedArray do
     end
 
     xit "should throw OutOfBoundsException" do
-      expect{ arr.get(4) }.to raise_error(standardError , "OutOFBoundsException")
+      expect{ arr.get(4) }.to raise_error("OutOFBoundsException")
     end
   end
 end
