@@ -6,18 +6,17 @@ class FixedArray
   end
 
   def get(index)
-    if index >= self.elements.length
-      raise RuntimeError, "OutOfBoundsException"
-    else
-      self.elements[index]
-    end
+    check_bounds(index)
+    self.elements[index]
   end
 
   def set(index, item)
-    if index >= self.elements.length
-      raise RuntimeError, "OutOfBoundsException"
-    else
+      check_bounds(index)
       self.elements[index] = item
-    end
+  end
+
+  private
+  def check_bounds(index)
+    raise RuntimeError, "OutOfBoundsException" if index >= self.elements.length
   end
 end
