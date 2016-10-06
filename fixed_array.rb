@@ -12,4 +12,12 @@ class FixedArray
       self.elements[index]
     end
   end
+
+  def set(index, item)
+    if index >= self.elements.length
+      raise RuntimeError, "OutOfBoundsException"
+    else
+      self.elements[index] = item
+    end
+  end
 end
