@@ -14,14 +14,18 @@ describe FixedArray do
   end
 
   describe "#get" do
-    xit "should get element"
+    it "should get element" do
+      expect(arr.get(1)).to eq(nil)
+    end
 
-    xit "should throw OutOFBoundsException"
+    xit "should throw OutOfBoundsException" do
+      expect{ arr.get(4) }.to raise_error(standardError , "OutOFBoundsException")
+    end
   end
 
   describe "#set" do
     xit "should add element to existing array"
 
-    xit "should throw OutOFBoundsException"
+    xit "should throw OutOfBoundsException"
   end
 end
