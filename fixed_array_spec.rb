@@ -1,14 +1,14 @@
 require_relative 'fixed_array'
 
 describe FixedArray do
+  let(:arr) { FixedArray.new(3) }
+
   describe "#new" do
     it "should create an array of specified size" do
-      arr = FixedArray.new(3)
       expect(arr.elements.length).to eq(3)
     end
 
     it "should contain only nil values when first instantiated" do
-      arr = FixedArray.new(3)
       expect(arr.elements.uniq).to eq([nil])
     end
   end
