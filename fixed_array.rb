@@ -4,4 +4,12 @@ class FixedArray
   def initialize(size)
     @elements = Array.new(size)
   end
+
+  def get(index)
+    if index >= self.elements.length
+      raise RuntimeError, "OutOfBoundsException"
+    else
+      self.elements[index]
+    end
+  end
 end
