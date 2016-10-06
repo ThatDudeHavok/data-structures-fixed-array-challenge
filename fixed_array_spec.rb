@@ -24,12 +24,12 @@ describe FixedArray do
   end
 
   describe "#set" do
-    xit "should add element to existing array" do
+    it "should add element to existing array" do
       expect(arr.set(1, 'test')).to eq('test')
     end
 
-    xit "should throw OutOfBoundsException" do
-      expect{ arr.get(4) }.to raise_error("OutOFBoundsException")
+    it "should throw OutOfBoundsException" do
+      expect{ arr.get(4) }.to raise_error("OutOfBoundsException")
     end
   end
 end
