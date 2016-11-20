@@ -17,6 +17,6 @@ class FixedArray
 
   private
   def check_bounds(index)
-    raise RuntimeError, "OutOfBoundsException" if index >= self.elements.length
+    raise RuntimeError, "OutOfBoundsException" if index >= self.elements.length # could use a class attribute named size/length?
   end
 end
